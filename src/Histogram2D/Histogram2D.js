@@ -1,12 +1,14 @@
 import React, { useState } from 'react';
-import Controls from '../Controls/Control'
-import { useForm, Form } from './HistogramFilters';
+import Controls from '../Display/Control'
+import { useForm, Form } from '../Services/FiltersService';
 import Histogram2dPlot from './Histogram2dPlot'
 import * as HistogramService from './HistogramService';
-import HttpRequest from '../httpRequestService';
+import HttpRequest from '../Services/HttpRequestService';
 import * as moment from 'moment';
+import Url from '../Services/Config.json'
 import { Spin } from 'antd';
 import 'antd/dist/antd.css';
+
 
 const initialValues = {
     startDate: new Date('2020-01-02'),
@@ -16,10 +18,11 @@ const initialValues = {
 }
 
 const Histogram2D = () => {
-    const { values, setValues, handleInputChange } = useForm(initialValues);
+    const { values, handleInputChange } = useForm(initialValues);
 
     let xData = [];
     let yData = [];
+    
     const [xAxisState, setxAxisState] = useState(xData);
     const [yAxisState, setyAxisState] = useState(yData);
     const [loadingState, setLoadingState] = useState(false);
@@ -34,16 +37,16 @@ const Histogram2D = () => {
         const endDate = moment(values.endDate).format("YYYY-MM-DD");
         const xAxis = values.xAxis;
         const yAxis = values.yAxis;
-        let queryUrl = 'https://e3x3fqdwla.execute-api.us-east-1.amazonaws.com/test3/?min=';
-        let apiUrl = 'https://e3x3fqdwla.execute-api.us-east-1.amazonaws.com/test3/result/?qid=';
+        let queryUrl = Url.Histogram2D.queryUrl;
+        let apiUrl = Url.Histogram2D.apiUrl;
         let csvUrl = "";
         queryUrl = queryUrl.concat(xAxis, ",0,", yAxis, ",0", "&columns=", xAxis, ",", yAxis, "&start_time=", startDate, "&end_time=", endDate);
-        console.log(queryUrl);
+        // console.log(queryUrl);
         HttpRequest(queryUrl).then(
             response => {
                 let queryId = response.data.split('queryId=')[1].split('}')[0];
                 apiUrl = apiUrl.concat(queryId);
-                console.log(apiUrl);
+                // console.log(apiUrl);
             }
         );
 
@@ -87,6 +90,7 @@ const Histogram2D = () => {
     }
     return (
         <div>
+            <h2>Select filters to view 2D Histogram</h2>
             <Form>
                 <Controls.DatePicker name="startDate" label="Start Date" value={values.startDate} onChange={handleInputChange} />
                 <Controls.DatePicker name="endDate" label="End Date" value={values.endDate} onChange={handleInputChange} />

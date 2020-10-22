@@ -1,0 +1,9 @@
+{
+    "Histogram2D":{
+        "queryUrl": "https://e3x3fqdwla.execute-api.us-east-1.amazonaws.com/test3/?min=",
+        "apiUrl": "https://e3x3fqdwla.execute-api.us-east-1.amazonaws.com/test3/result/?qid="
+    },
+    "Cesium":{
+        "apiUrl": "https://qwcg98anm8.execute-api.us-east-1.amazonaws.com/dev/?"
+    }
+}

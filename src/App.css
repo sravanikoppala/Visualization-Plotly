@@ -2,3 +2,12 @@
   text-align: center;
   margin-top: 5px;
 }
+
+.navLink{
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  margin-left: 7px;
+  align-items: center;
+  color: white;
+}
