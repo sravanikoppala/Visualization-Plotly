@@ -1,0 +1,15 @@
+#toolbar {
+    float: left;
+    position: absolute;
+    z-index: 1000;
+    background: rgba(42, 42, 42, 0.8);
+    padding: 4px;
+    border-radius: 4px;
+    font-weight: bold;
+    color: white;
+    
+ };
+
+ #slider{
+     display: inline-block;
+ }
