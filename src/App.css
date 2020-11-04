@@ -1,13 +1,16 @@
 .App {
   text-align: center;
-  margin-top: 5px;
 }
 
-.navLink{
-  width: 100%;
+.navbar {
+  background-color: #060b26;
+  height: 50px;
   display: flex;
-  justify-content: space-around;
-  margin-left: 7px;
+  justify-content: flex-start;
   align-items: center;
-  color: white;
+}
+
+.bars-icon{
+  font-size: 19px;
+  margin-left: 10px;
 }

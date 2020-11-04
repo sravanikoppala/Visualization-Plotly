@@ -3,11 +3,11 @@ import { Button as MuiButton, makeStyles } from '@material-ui/core';
 
 const useStyles = makeStyles((theme) => ({
     root: {
-        marginTop: theme.spacing(4),
+        marginTop: theme.spacing(1),
         margin: theme.spacing(1)
     },
     label: {
-        minWidth: 80,
+        minWidth: 60,
         margin: theme.spacing(0.7)
     }
 }));

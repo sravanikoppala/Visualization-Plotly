@@ -1,15 +1,76 @@
-#toolbar {
-    float: left;
+#cesiumContainer {
+    display: flex;
+    height: calc(100vh - 50px);
+}
+
+.menu-overlay {
     position: absolute;
-    z-index: 1000;
-    background: rgba(42, 42, 42, 0.8);
-    padding: 4px;
-    border-radius: 4px;
-    font-weight: bold;
-    color: white;
-    
+    z-index: 1;
+    margin-left: 40px;
+    top: 70px;
+    background: linear-gradient(90deg, rgba(94, 90, 96, 0.4514180672268907) 51%, rgba(0, 142, 255, 0.3393732492997199) 100%, rgba(9, 121, 107, 0.26934523809523814) 100%);
+    border: 1px solid white;
+}
+
+.menu-label {
+    color: #80d8ff;
+    display: flex;
+    align-items: flex-start;
+    cursor: pointer;
+    width: 400px;
+}
+
+.menu-components {
+    transition: 0.5s;
+}
+
+.menu-filters {
+    width: 390px;
+    height: 145px;
+    display: block;
+}
+
+.menu-filters-active {
+    width: 390px;
+    height: 145px;
+    display: none;
+}
+
+label {
+    margin: 5px;
+}
+
+.menu-label .arrow-icon {
+    margin-left: auto;
+}
+
+.results-view{
+    width: 400px;
+    color: #80d8ff;
+    cursor: pointer;
+    font-size: medium;
+    display: flex;
+    align-items: flex-start;
+    margin-left: 5px;
+}
+
+.results-tavle-view{
+    width: 390px;
+    color: #80d8ff;
+    cursor: pointer;
+    text-align: left;
+}
+
+#toolbar {
+    margin-left: 25px;
  };
 
  #slider{
-     display: inline-block;
+    display: inline;
+    cursor: pointer;
  }
+
+ #toolbaractive {
+    display: none;
+ };
+

@@ -6,6 +6,7 @@ export function useForm(initialValues) {
 
     const [values, setValues] = useState(initialValues);
     const handleInputChange = event => {
+        console.log(event);
         const {name, value} = event.target;
         setValues({
           ...values,
@@ -21,9 +22,9 @@ export function useForm(initialValues) {
 const useStyles = makeStyles((theme) => ({
     formControl: {
         '& .MuiFormControl-root':{           
-            minWidth: 120,
+            minWidth: 50,
             margin: theme.spacing(1),
-            marginTop: theme.spacing(4)
+            marginTop: theme.spacing(1)
         }     
     } 
 }));

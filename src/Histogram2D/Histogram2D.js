@@ -22,7 +22,7 @@ const Histogram2D = () => {
 
     let xData = [];
     let yData = [];
-    
+
     const [xAxisState, setxAxisState] = useState(xData);
     const [yAxisState, setyAxisState] = useState(yData);
     const [loadingState, setLoadingState] = useState(false);
@@ -33,6 +33,7 @@ const Histogram2D = () => {
     const getData = (values) => {
         setLoadingState(true);
         setloadPlotState(true);
+        setAlertState(false);
         const startDate = moment(values.startDate).format("YYYY-MM-DD");
         const endDate = moment(values.endDate).format("YYYY-MM-DD");
         const xAxis = values.xAxis;
