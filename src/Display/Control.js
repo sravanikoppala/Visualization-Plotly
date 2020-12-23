@@ -2,9 +2,11 @@ import Select from './Select';
 import DatePicker from './DatePicker';
 import Button from './Button';
 import AlertTextLoop from './AlertTextLoop';
+import ToggleSwitch from './ToggleSwitch';
 import Slider from './Slider';
 import SelectAntD from './SelectAntD'
 import DaterangePicker from './DaterangePicker'
+import TextInput from './TextInput'
 
 const Controls = {
     Select,
@@ -13,6 +15,8 @@ const Controls = {
     Button,
     AlertTextLoop,
     Slider,
-    SelectAntD
+    SelectAntD,
+    TextInput,
+    ToggleSwitch
 }
 export default Controls;

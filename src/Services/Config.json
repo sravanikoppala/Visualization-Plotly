@@ -4,6 +4,7 @@
         "apiUrl": "https://e3x3fqdwla.execute-api.us-east-1.amazonaws.com/test3/result/?qid="
     },
     "Cesium":{
-        "apiUrl": "https://qwcg98anm8.execute-api.us-east-1.amazonaws.com/dev/?"
+        "apiUrl": "https://qwcg98anm8.execute-api.us-east-1.amazonaws.com/dev/?",
+        "accessToken": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJqdGkiOiI4MmMxYjJiYS04MmQyLTQzMDEtYjA0NC04ODI3OWYzOGJjNmMiLCJpZCI6MzM2ODcsImlhdCI6MTU5OTA4MTk4MX0.tVTANg3MA7JR9yBYm23ayj-XdlIlUjT-FQqEFtPi-os"
     }
 }

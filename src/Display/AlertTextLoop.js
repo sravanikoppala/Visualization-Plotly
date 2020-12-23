@@ -5,7 +5,7 @@ import 'antd/dist/antd.css';
 
 export default function AlertTextLoop() {
     return (
-        <div style={({ width: '50%', margin: 'auto', marginTop: '10px' })} >
+        <div style={({ margin: 'auto', marginTop: '10px' })} >
             <Alert
                 isOpen="false"
                 closable
@@ -13,8 +13,8 @@ export default function AlertTextLoop() {
                 showIcon
                 message={
                     <TextLoop mask>
-                        <div>No data eists for selected filters</div>
-                        <div>Please try a different date range or different combination of filters</div>
+                        <div>No data exists for selected filters</div>
+                        <div>Please try a different date or different combination of filters</div>
                     </TextLoop>}
             />
         </div>

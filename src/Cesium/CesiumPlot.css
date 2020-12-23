@@ -3,6 +3,15 @@
     height: calc(100vh - 50px);
 }
 
+.textLoop {
+    position: absolute;
+    z-index: 200;
+    width: 700px;
+    height: 500px;
+    margin-top: 80px;
+    margin-left: 600px;
+}
+
 .menu-overlay {
     position: absolute;
     z-index: 1;
@@ -10,14 +19,18 @@
     top: 70px;
     background: linear-gradient(90deg, rgba(94, 90, 96, 0.4514180672268907) 51%, rgba(0, 142, 255, 0.3393732492997199) 100%, rgba(9, 121, 107, 0.26934523809523814) 100%);
     border: 1px solid white;
+    cursor: move;
 }
 
 .menu-label {
     color: #80d8ff;
     display: flex;
     align-items: flex-start;
-    cursor: pointer;
-    width: 400px;
+    cursor: move;
+}
+
+.menu-label label {
+    cursor: move;
 }
 
 .menu-components {
@@ -25,52 +38,131 @@
 }
 
 .menu-filters {
-    width: 390px;
-    height: 145px;
+    text-align: center;
+    width: 175px;
     display: block;
+    padding: 10px;
+    z-index: 0;
+    cursor: pointer;
+    color: #80d8ff;
+    font-size: 10px;
+    margin-bottom: 5px;
 }
 
 .menu-filters-active {
-    width: 390px;
-    height: 145px;
     display: none;
 }
 
 label {
     margin: 5px;
+    margin-left: 10px;
+}
+
+.labelColor {
+    margin: 5px;
+    margin-left: -8px;
+}
+
+.color-label {
+    color: #80ffe7;
+    margin-right: 2px;
+    margin-left: 22px;
+    margin-top: 20px;
+    font-size: 10px;
+}
+
+.dataset-label {
+    color: #80ffe7;
+    margin-left: 10px;
+    font-size: 10px;
 }
 
 .menu-label .arrow-icon {
-    margin-left: auto;
+    cursor: move;
 }
 
-.results-view{
-    width: 400px;
-    color: #80d8ff;
+#arrow-up {
+    margin-left: 25px;
     cursor: pointer;
+}
+
+#arrow-down {
+    cursor: pointer;
+}
+
+.data-assistant {
+    margin-top: 15px;
+}
+
+.table-row {
+    cursor: pointer;
+}
+
+.dialog-title {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    font-weight: bold;
+    font-size: 1.2rem;
+    margin: 15px;
+}
+
+#dialog-cancel-button {
+    margin-right: 11px;
+    top: -11px;
+}
+
+.results-view {
+    color: #80d8ff;
+    width: 177px;
     font-size: medium;
-    display: flex;
-    align-items: flex-start;
-    margin-left: 5px;
-}
-
-.results-tavle-view{
-    width: 390px;
-    color: #80d8ff;
-    cursor: pointer;
-    text-align: left;
+    position: absolute;
+    margin-left: -11px;
+    z-index: 1;
+    top: 93px;
+    background: linear-gradient(90deg, rgba(94, 90, 96, 0.4514180672268907) 51%, rgba(0, 142, 255, 0.3393732492997199) 100%, rgba(9, 121, 107, 0.26934523809523814) 100%);
+    border-left: 1px solid white;
+    border-right: 1px solid white;
+    border-bottom: 1px solid white;
+    cursor: move;
 }
 
 #toolbar {
-    margin-left: 25px;
- };
+    margin-left: 0px;
+}
 
- #slider{
-    display: inline;
+.slider {
     cursor: pointer;
- }
+}
 
- #toolbaractive {
+.slider input {
+    width: 60%;
+    color: cornsilk;
+    background-color: #3f51b5;
+    margin-left: 10px;
+}
+
+.slider-thumb-label {
+    top: 0px;
+    margin-left: 5px;
+}
+
+/* .slider-thumb-label span::after {
+    position: absolute;
+    content: '';
+    height: 100%;
+    width: 100%;
+    background-color: #3f51b5;
+    color: cornsilk;
+    border: 0.5px solid #fff;
+    z-index: -1;
+    left: 50%;
+    transform: translateX(-50%) rotate(45deg);
+    bottom: 5px;
+    border-top-right-radius: 50%;
+    box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.1);
+    border-bottom-left-radius: 50%;
+    border-bottom-right-radius: 50%;
+} */
+
+.toolbar-inactive {
     display: none;
- };
-
+}

@@ -2,15 +2,40 @@
   text-align: center;
 }
 
-.navbar {
+.navigation-bar {
   background-color: #060b26;
   height: 50px;
   display: flex;
-  justify-content: flex-start;
-  align-items: center;
+  padding: 7px;
 }
 
-.bars-icon{
+.bars-icon {
   font-size: 19px;
-  margin-left: 10px;
+  cursor: pointer;
+  margin-right: 7px;
+  margin-left: 5px;
+}
+
+.navbar-content-title {
+  float: left;
+  cursor: pointer;
+  color: white;
+}
+
+.cesium-infoBox-title {
+  height: 30px;
+}
+
+.logo {
+  width: 34px;
+  height: 34px;
+  margin-right: 5px;
+}
+
+/* .ant-select-selector {
+  margin-bottom: -3px;
+} */
+
+.ant-alert-message {
+  width: 550px;
 }

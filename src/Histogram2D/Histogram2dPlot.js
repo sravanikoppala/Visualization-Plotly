@@ -6,28 +6,26 @@ const Plot = createPlotlyComponent(Plotly);
 
 
 export default function Histogram2dPlot(props) {
-    let x = props.xValue;
-    let y = props.yValue;
     return (
         <div>
             <Plot
                 data={[
                     {
-                        x: x,
-                        y: y,
+                        x: props.xValue,
+                        y: props.yValue,
                         histnorm: "percent",
                         mode: "markers",
                         autobinx: false,
                         xbins: {
                             start: 0,
-                            end: 10,
-                            size: 0.2
+                            end: props.xRange,
+                            size: props.xBin
                         },
                         autobiny: false,
                         ybins: {
                             start: 0,
-                            end: 10,
-                            size: 0.2
+                            end: props.yRange,
+                            size: props.yBin
                         },
                         colorscale:
                             [[0, "#FFFFFF"],
@@ -53,18 +51,17 @@ export default function Histogram2dPlot(props) {
                     }
                 ]}
                 layout={{
-                    width: 900, height: 600, title: '2D Histogram',
+                    width: 900, height: 600, title: props.title,
                     showlegend: true,
                     xaxis: {
                         showline: true,
                         mirror: 'ticks',
-                        dtick: 0.5,
-                        //tickvals:[ 1 ,2, 3, 4, 5,6, 7,8,9,10],   
-                        exponentformat: 'e',
-                        showexponent: 'all',
-                        //tickmode: 'auto',
+                        // tick0: 1,
+                        // dtick: 10,
+                        // type: 'log',
+                        autorange: true,
                         title: {
-                            text: 'GR_RC_rainrate (mm/h)',
+                            text: props.xName,
                             font: {
                                 family: 'Courier New, monospace',
                                 size: 18,
@@ -76,9 +73,12 @@ export default function Histogram2dPlot(props) {
                         ticks: 'outside',
                         showline: true,
                         mirror: 'ticks',
-                        dtick: 0.5,
+                        // tick0: 1,
+                        // dtick: 10,
+                        // type: 'log',
+                        autorange: true,
                         title: {
-                            text: 'Preciprate(mm/h)',
+                            text: props.yName,
                             font: {
                                 family: 'Courier New, monospace',
                                 size: 18,
@@ -92,8 +92,8 @@ export default function Histogram2dPlot(props) {
                             type: 'line',
                             x0: 0,
                             y0: 0,
-                            x1: 10,
-                            y1: 10,
+                            x1: props.xRange,
+                            y1: props.yRange,
                             line: {
                                 color: '#000000',
                                 width: 1,

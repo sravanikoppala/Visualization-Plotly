@@ -8,17 +8,26 @@ export const SidebarData = [
     {
         title: 'Home',
         path: '/',
+        key: 1,
         icon: <HomeIcon/>,
         cName: 'nav-text'
     }, {
         title: '2D-Histogram',
         path: '/Histogram2D',
+        key: 2,
         icon: <InsertChartIcon />,
         cName: 'nav-text'
     }, {
         title: 'Cesium',
-        path: '/Cesium',
+        path: '/CesiumSingle',
+        key: 3,
         icon: <PublicIcon />,
         cName: 'nav-text'
-    }
+     }//, {
+    //     title: 'Cesium Single Date',
+    //     path: '/CesiumSingle',
+    //     key: 4,
+    //     icon: <PublicIcon />,
+    //     cName: 'nav-text'
+    // }
 ]
